@@ -1,0 +1,117 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-4">
+            <div class="card">
+                <p class="mb-0 h4  p-3" style="background-color: var(--font-color); color: white;">Payment Methods</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="card p-3">
+                <!-- <div class="card-body border p-0">
+                    <p>
+                        <a class="btn btn-primary w-100 h-100 d-flex align-items-center justify-content-between"
+                            data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                            aria-controls="collapseExample">
+                            <span class="fw-bold">PayPal</span>
+                            <span class="fab fa-cc-paypal">
+                            </span>
+                        </a>
+                    </p>
+                    <div class="collapse p-3 pt-0" id="collapseExample">
+                        <div class="row">
+                            <div class="col-8">
+                                <p class="h4 mb-0">Summary</p>
+                                <p class="mb-0"><span class="fw-bold">Product:</span><span class="c-green">: Name of
+                                        product</span></p>
+                                <p class="mb-0"><span class="fw-bold">Price:</span><span
+                                        class="c-green">:$452.90</span></p>
+                                <p class="mb-0">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Atque
+                                    nihil neque
+                                    quisquam aut
+                                    repellendus, dicta vero? Animi dicta cupiditate, facilis provident quibusdam ab
+                                    quis,
+                                    iste harum ipsum hic, nemo qui!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+                <div class="card-body border p-0">
+                    <p>
+                        <a class="btn btn-primary p-2 w-100 h-100 d-flex align-items-center justify-content-between"
+                            data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="true"
+                            aria-controls="collapseExample">
+                            <span class="fw-bold">Credit Card</span>
+                        </a>
+                    </p>
+                    <div class="collapse show p-3 pt-0" id="collapseExample">
+                        <div class="row">
+                            <div class="col-lg-5 mb-lg-0 mb-3">
+                                <p class="h4 mb-0 mt-2" style="color: var(--font-color);">Summary</p>
+                                <p class="mb-2 mt-2"><span class="fw-bold" style="color: var(--font-color);">Games:</span><span class="" *ngFor="let game of purchasedGames">
+                                        {{game.name}} <br></span>
+                                </p>
+                                <p class="mb-0">
+                                    <span class="fw-bold" style="color: var(--font-color);">Total price:</span>
+                                    <span class="p-2">{{totalPrice | currency}}</span>
+                                </p>
+                                <div style="height: 120px;" class="ml-0">
+                                    <img class="mt-2" src="/assets/cards.png" alt="" style="width: 60%; height: 100%">
+                                </div>
+                            </div>
+                            <div class="col-lg-7">
+                                <form [formGroup]="paymentForm" (ngSubmit)="OnSubmit()" class="form mt-3">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="form__div ">
+                                                <input #inp required formControlName="Number" type="text" class="form-control" pattern="[0-9]{16}">
+                                                <label for="" class="form__label">Card Number</label>
+                                                <div class="error" style="width: 500px;" [hidden]="!paymentForm.get('Number')?.errors?.['required'] || paymentForm.get('Number')?.untouched">
+                                                    <span class="" style="color: red; ">card number is required</span>
+                                                </div>
+                                                <div class="error" style="width: 500px;" [hidden]="paymentForm.get('Number')?.valid || paymentForm.get('Number')?.untouched">
+                                                    <span class="" style="color: red; ">card number must be 16-digits</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mt-3">
+                                            <div class="form__div">
+                                                <input required formControlName="MMYY" type="text" class="form-control" placeholder=" ">
+                                                <label for="" class="form__label">MM/yy</label>
+                                                <div class="error" [hidden]="!paymentForm.get('MMYY')?.errors?.['required'] || paymentForm.get('MMYY')?.untouched">
+                                                    <span class="" style="color: red; ">MM/YY is required</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="col-6 mt-3">
+                                            <div class="form__div">
+                                                <input required type="password" formControlName="cvv" class="form-control" placeholder=" ">
+                                                <label class="form__label">cvv code</label>
+                                                <div class="error" [hidden]="!paymentForm.get('cvv')?.errors?.['required'] || paymentForm.get('cvv')?.untouched">
+                                                    <span style="color: red; ">cvv is required</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <div class="form__div">
+                                                <input required type="text" formControlName="NameOnCard" class="form-control" placeholder=" ">
+                                                <label for="" class="form__label">name on the card</label>
+                                                <div class="error" [hidden]="!paymentForm.get('NameOnCard')?.errors?.['required'] || paymentForm.get('NameOnCard')?.untouched">
+                                                    <span class="" style="color: red; ">name is required</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-12">
+                                            <button type="submit" [disabled]="paymentForm.invalid" class="btn submit-btn w-100">submit</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

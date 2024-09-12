@@ -1,0 +1,92 @@
+
+ .child{
+    margin: 10px 15px 30px 15px;
+    position: relative;
+    /* background-color: aqua; */
+}
+
+
+.container{
+    margin: auto;
+}
+
+.store .container .child{
+    transition: .4s;
+    box-shadow: 0px 0px 10px 2px rgb(217, 217, 217);
+}
+.store .container .child:hover{
+    box-shadow: 0px 0px 10px 10px rgb(170, 170, 170);
+    transform: scale(1.08)
+} 
+
+/* .overlay{
+     position: absolute;
+     width: 100%;
+     height: 0;
+     top: 0;
+     left: 0;
+     right: 0;
+     left: 0;
+     background-color:black;
+     transition: .2s;
+}
+
+.store .container .child:hover div.overlay{
+    height: 100%;
+    z-index: -1;
+} */
+/* .store .child:hover ul{
+  z-index: -1;
+}
+.store .child:hover{
+    z-index: 1;
+} */
+
+/* .store .child:hover h4{
+    color: white;
+    z-index: 1;
+} */
+
+h4{
+    color: var(--font-color);
+}
+
+.btns{
+    display: flex;
+    align-items: end;
+}
+
+
+.price{
+    position: absolute;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background-color: var(--font-color);
+    color: white;
+}
+
+.small-icon{
+   height: 15px;
+   font-size: 18px;
+}
+
+::ng-deep .snackbar-addToCart{
+    
+        --mdc-snackbar-supporting-text-color: green;
+        --mdc-snackbar-container-color: white;
+        
+}
+
+.btnAdd{
+    background-image: linear-gradient(to left ,rgb(25, 135, 84),rgb(16, 176, 101) );
+    border-radius: 10px;
+    border: none;
+}
+.btnDetails{
+    color: white;
+    border: none;
+    background-image: linear-gradient(to left , rgb(17, 83, 133) , rgb(26, 110, 175));
+    border-radius:7px ;
+}

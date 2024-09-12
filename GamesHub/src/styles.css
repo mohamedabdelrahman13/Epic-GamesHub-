@@ -1,0 +1,60 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; height: 100%; }
+body {padding: 0; margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* font style */
+ 
+.gen-btn{
+    border-radius: 15px;
+    border: 1px solid  var(--btn-color);
+    color: blue;
+    transition: .3s;
+}
+.gen-btn:hover{
+  background-color: var(--btn-color);
+  color: white;
+}
+  
+  :root {
+    --font-color:rgb(17, 83, 133);
+  }
+  
+  .inp{
+    border-radius: 5px;
+    height: 30px;
+    border-bottom: 3px solid var(--font-color);
+}
+  .submit-btn{
+    color:rgb(17, 83, 133) ;
+    border: 1px solid rgb(17, 83, 133);
+    border-radius: 10px;
+
+  }
+  .submit-btn:hover{
+    background-color:rgb(17, 83, 133) ;
+    color:white ;
+    border: 1px solid rgb(17, 83, 133);;
+  }
+  .btnSuccess{
+    background-image: linear-gradient(to left ,rgb(25, 135, 84),rgb(16, 176, 101) );
+    border-radius: 10px;
+    border: none;
+  }
+  .icons-style{
+    height: 15px;
+    font-size: 18px;
+  }
+
+  ::ng-deep .mat-mdc-snackbar {
+    --mdc-snackbar-supporting-text-color: green;
+  }
+
+  
+::ng-deep .snackbar{
+  --mdc-snackbar-supporting-text-color: green;
+}

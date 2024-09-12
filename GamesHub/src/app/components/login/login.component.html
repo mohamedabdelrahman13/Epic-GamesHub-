@@ -1,0 +1,64 @@
+<!-- <div>
+  {{ Password?.errors | json}}
+ 
+</div>
+<div>
+  {{ password.className | json}}
+ 
+</div> -->
+  <div class="container parent">
+    
+    <div class="row par">
+       <div class="col sdd">
+        <form [formGroup]="loginForm" (ngSubmit)="OnSubmit(currentName , loginForm.get('Email')?.value , loginForm.get('Password')?.value )">
+         
+          <legend><h2>Sign In</h2></legend>
+          <mat-form-field class="custom" style="width: 100%; margin-bottom: 4px;">
+            <mat-label>Email</mat-label>
+            <mat-icon matPrefix>mail</mat-icon>
+            <input required #emailInp matInput formControlName="Email" type="email" class="inp form-control mail" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <mat-error [hidden]="loginForm.get('Email')?.untouched || !loginForm.get('Email')?.errors?.['required']">
+              Email is required
+            </mat-error>
+          </mat-form-field>
+          <mat-form-field style="width: 100%; margin: 0px 0px 30px 0px;">
+            <mat-label>Password</mat-label>
+            <mat-icon matPrefix>lock</mat-icon>
+            <input matInput type="password" #password formControlName="Password" class="inp form-control password" id="exampleInputPassword1" required  pattern="[A-Za-z0-9]{8,20}">
+            <mat-error  [hidden]="loginForm.get('Password')?.untouched || !loginForm.get('Password')?.errors?.['required']">
+              Password is required
+            </mat-error>
+            <mat-error  [hidden]="loginForm.get('Password')?.valid || loginForm.get('Password')?.untouched">
+              Password must be 8~20 alphanumeric (characters or numbers only)
+            </mat-error>
+          </mat-form-field>
+          <!-- <div class="mb-3 icon-parent">
+            <label for="exampleInputEmail1" class="form-label ">Email address</label>
+            <input required #emailInp matInput formControlName="Email" type="email" class="inp form-control mail" id="exampleInputEmail1" aria-describedby="emailHelp">
+            <mat-icon class="mail-icon" [hidden]="emailInp.value" matPrefix>mail</mat-icon>
+            <div style="height: 30px;"  class="alert-warning"  [hidden]="loginForm.get('Email')?.untouched || !loginForm.get('Email')?.errors?.['required']">
+              <small  style="color: red; padding-left: 3px;">Email is required!</small>
+            </div>
+          </div> -->
+          <!-- <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Password</label>
+            <input type="password" #password formControlName="Password" class="inp form-control password" id="exampleInputPassword1" required  pattern="[A-Za-z0-9]{8,20}">
+            <div  class=" alert-warning"   [hidden]="loginForm.get('Password')?.untouched || !loginForm.get('Password')?.errors?.['required']">
+              <small  style=" color: red;">Password is required!</small>
+            </div>
+            <div style="height: 30px;"  class=" alert-warning"  [hidden]="loginForm.get('Password')?.valid || loginForm.get('Password')?.untouched">
+              <small  style=" color: red;">Password must be between 8~20 characters long</small>
+            </div>
+          </div> -->
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+            <span class="signup">don't have an account ?<a [routerLink]="['/register']" routerLinkActive="router-link-active" > sign up</a></span>
+          </div>
+          <button type="submit" class="btn submit-btn" [disabled]="loginForm.invalid" >Login</button>
+        </form>
+       </div>
+       <div class="col login-img" [ngStyle]="backgroundStyle">
+       </div>
+    </div>
+</div>

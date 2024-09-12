@@ -1,0 +1,22 @@
+<div class="category container" style="width: 50%; margin: 10px auto;">
+  <select #selected (change)="changeCat()" class="form-control" name="cat" id="prdCat" [(ngModel)]="selectedCatName">
+    <option *ngFor="let cat of catList" [value]="cat.name">{{cat.name}}</option>
+  </select>
+</div>
+<section class="store" style="margin: 20px;">
+   <div class="row container">
+     <div  class="col-md-4 card child" *ngFor="let item of gamesOfCat"  style="width: 18rem; padding: 3px;">
+      <img [src]="item.imgUrl" class="card-img-top img" alt="...">
+      <span class="price">{{item.price | currency}}</span>
+      <div class="card-body cont">
+        <h4 class="card-title">{{item.name}}</h4> 
+      </div>
+       <div class="card-body btns">
+         <h4 style="font-weight: lighter;" [hidden]="!item.inCart || item.Purchased">(in Cart)</h4>
+         <h4 style="font-weight: lighter; color: green;" [hidden]="!item.Purchased">(in Library)</h4>
+        <button #addToCartBtn [hidden]="item.inCart || item.Purchased" class="btn submit-btn " (click)="addToCart(item)" style="margin-right: auto;">Add to cart  <mat-icon class="shopping_cart small-icon" >shopping_cart</mat-icon></button>
+        <button  class="btn btnDetails"  (click)="openGameDetails(item.id)" style="margin-left: auto;">Details</button>
+       </div> 
+    </div>
+   </div>
+</section>

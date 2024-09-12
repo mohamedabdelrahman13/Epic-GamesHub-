@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <!-- <a class="navbar-brand img" [ngStyle]="logo"></a> -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse par" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link"   aria-current="page" [routerLink]="['/home']" routerLinkActive="router-link-active" >Home <mat-icon class="Home" style="font-size: 17px; height: 14px;"> home</mat-icon></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page"   [routerLink]="['/store']" routerLinkActive="router-link-active" >Store <mat-icon class="store-icon" style="font-size: 17px; height: 14px;">store</mat-icon>
+          </a>
+        </li>
+        
+        
+        <li class="nav-item">
+          <a class="nav-link"   aria-current="page" [routerLink]="['/library']" routerLinkActive="router-link-active" >Library <mat-icon class="Home" style="font-size: 17px; height: 14px;">storage</mat-icon></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [ngClass]="{'activeLink': activeLink ==='cart'}" aria-current="page" [routerLink]="['/cart']" >Your Cart<mat-icon style="font-size: 17px; height: 15px; padding-left: 5px;   outline: none;">shopping_cart</mat-icon><span  [hidden]="!itemsAdded" class="addedGames" style="margin-bottom: 3px; font-size: 17px;">({{itemsAdded}})</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" id="navbarDarkDropdownMenuLink"  data-bs-toggle="dropdown" aria-expanded="false" style="cursor: pointer;">
+            More
+          </a>
+          <ul class="dropdown-menu dropdown-menu-light" aria-labelledby="navbarDarkDropdownMenuLink">
+            <li><a class="dropdown-item">about us</a></li>
+            <li><a class="dropdown-item">contact</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a [hidden]="!isLoggedIn" (click)="logout()" class="dropdown-item">Logout <mat-icon style="font-size: 17px; height: 14.5px; padding-left: 5px;">logout</mat-icon></a></li>
+            <li><a [hidden]="isLoggedIn" [routerLink]="['/login']" routerLinkActive="router-link-active"  class="dropdown-item">Login <mat-icon style="font-size: 17px; height: 15px;">login</mat-icon></a></li>
+          </ul>
+        </li>
+        <li class="nav-item name">
+            <span [hidden]="!isLoggedIn">{{username}}</span>
+        </li>
+      </ul>
+      <button class="btn submit-btn" [routerLink]="['/register']" routerLinkActive="router-link-active" >Sign Up</button>    
+    
+    </div>
+  </div>
+</nav>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

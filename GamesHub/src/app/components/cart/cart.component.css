@@ -1,0 +1,85 @@
+
+
+
+
+.container{
+    width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+
+.delete:hover{
+    transition: .2s;
+}
+.delete:hover{
+  color: var(--font-color);
+}
+
+
+
+ ::ng-deep .cartCleared{
+   --mdc-snackbar-supporting-text-color: var(--font-color);
+   --mdc-snackbar-container-color: white;
+   
+ }
+ table{
+  background-color: white;
+ }
+ .table-content{
+  margin-top: 30px;
+ }
+
+ table tr{
+  margin: 50px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px rgb(191, 191, 191);
+  border: none;
+ }
+
+ .btnClear{
+  border-radius: 10px;
+  color: white;
+  background-color: red;
+ }
+ 
+
+ .empty{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -50%);
+  background-color: var(--font-color);
+  padding: 20px;
+  font-size: 50px;
+  color: white;
+  border-radius: 15px;
+}
+
+.btnPurchase{
+  background-image: linear-gradient(to left ,rgb(25, 135, 84),rgb(16, 176, 101) );
+    border-radius: 10px;
+    border: none;
+}
+
+.header{
+  font-size: 35px;
+  text-align: center;
+  margin-top: 30px;
+  text-transform: capitalize;
+
+}
+
+.header .line{
+  display: block;
+  width: 50px;
+  height: 3px;
+ background-color: var(--font-color);
+ margin: 10px auto 20px auto;
+
+}
+
+
+.header .section-title{
+  text-transform: capitalize;
+}

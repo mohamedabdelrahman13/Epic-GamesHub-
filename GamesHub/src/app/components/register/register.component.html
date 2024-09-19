@@ -33,41 +33,8 @@
           <mat-error  [hidden]="registerForm.get('Password')?.valid || registerForm.get('Password')?.untouched">
             Password must be 8~20 alphanumeric (characters or numbers)
           </mat-error>
-        </mat-form-field>
-         <!-- <div class="col-12">
-           <label for="Name" class="form-label">Username</label>
-           <input matInput type="text" formControlName="Name" class="form-control inp" id="Name" placeholder="">
-           <div style="height: 30px;"  class="alert-warning"  [hidden]="registerForm.get('Name')?.untouched || !registerForm.get('Name')?.errors?.['required']">
-             <small  style="color: red; padding-left: 3px;">Name is required!</small>
-           </div>
-         </div>
-           <div class="col-12">
-             <label for="inputEmail4" class="form-label">Email</label>
-             <input type="email" formControlName="Email" class="form-control inp" id="inputEmail4">
-             <div style="height: 30px;"  class="alert-warning"  [hidden]="registerForm.get('Email')?.untouched || !registerForm.get('Email')?.errors?.['required']">
-               <small  style="color: red; padding-left: 3px;">Email is required!</small>
-             </div>
-           </div>
-           <div class="col-12">
-             <label for="Password" class="form-label">Password</label>
-             <input type="password" formControlName="Password" class="form-control inp" id="Password" pattern="[A-Za-z0-9]{8,20}">
-             <div  class=" alert-warning"   [hidden]="registerForm.get('Password')?.untouched || !registerForm.get('Password')?.errors?.['required']">
-               <small  style=" color: red;">Password is required!</small>
-             </div>
-             <div style="height: 30px;"  class=" alert-warning"  [hidden]="registerForm.get('Password')?.valid || registerForm.get('Password')?.untouched">
-               <small  style="color: red;">Password must be between 8~20 characters long</small>
-             </div>
-           </div> -->
-           <!-- <div class="col-12">
-             <label for="inputAddress2" class="form-label">Address 2</label>
-             <input type="text" class="form-control inp" id="inputAddress2" placeholder="Apartment, studio, or floor">
-           </div>
-           <div class="col-md-6">
-             <label for="inputCity" class="form-label">City</label>
-             <input type="text" class="form-control inp" id="inputCity">
-           </div> -->
-   
-           <div class="col-12">
+        </mat-form-field>  
+           <div class="">
              <div class="form-check">
                <input class="form-check-input" type="checkbox" id="gridCheck">
                <label class="form-check-label" for="gridCheck">
@@ -75,12 +42,12 @@
                </label>
              </div>
            </div>
-           <div class="col-12">
+           <div class="w-100">
              <button type="submit" [disabled]="registerForm.invalid" class="btn submit-btn">Sign Up</button>
             </div>
             
             <hr>
-            <div class="col-12">
+            <div class="">
              <button type="submit" class="btn submit-btn">continue with google <img src="assets/google.png" alt=""></button>
            </div>
          </form>

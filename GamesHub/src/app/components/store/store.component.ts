@@ -59,18 +59,14 @@ export class StoreComponent implements OnInit {
 
   changeCat()
   {
-    if(this.selectedCatName != 'All')
+    if(this.selectedCatName == 'All')
     {
-      this.game.getCatListAll();
+      this.gamesOfCat = this.game.getAllGames();
     }
-    this.gamesOfCat = this.games.filter(game => game.category == this.selectedCatName)
+    else{
+      this.gamesOfCat = this.games.filter(game => game.category == this.selectedCatName)
+    }
+    
   }
-//   addbtn(gameID:number){
-//    let addedGame = this.games.find(game=>game.id=gameID);
-//    if(addedGame?.inCart){
-//     this.addToCartBtn.nativeElement.innerText="In Cart"
-//   }
- 
-// }
 
 }

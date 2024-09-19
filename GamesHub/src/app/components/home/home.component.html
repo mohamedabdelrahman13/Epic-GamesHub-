@@ -1,6 +1,6 @@
 <div class="row">
-   <section class="col-6 child-1">
-     <div class="home-content">
+   <section class="home-content col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 home-item1" #HomeTranslateEle>
+     <div >
         <h1><span style="color: var(--font-color);">Welcome to EpicGamesHub:</span> Your Ultimate Destination for Online Gaming</h1>
         <p>Discover, buy, and play your favorite games all in one place. EpicGamesHub
  offers a vast collection of the latest and greatest titles across every genre. Join our community of gamers and elevate your gaming experience with exclusive deals, seamless downloads, and immersive gameplay.</p>
@@ -8,28 +8,29 @@
         <button class="btn learn-more">learn more</button>
      </div>
    </section>
-   <section class="col-6 child-2" [ngStyle]="backgroundStyle">
+   <section class="home-content col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 home-item2" #HomeTranslateEle2 [ngStyle]="backgroundStyle">
   </section>
 </div>
 
-<div class="services" style="height: 100vh;">
+<div class="services" style="height: fit-content;">
     <div class="services-header" style="text-align: center;">
         <h1>Our services</h1>
         <span class="line"></span>
     </div>
-    <div class="services-content row container" style="text-align: center;">
-        <div class="services-item col-6 " id="trigger-section1">
-            <mat-icon class="icons">sports_esports</mat-icon>
-            <h4>Wide Selection of Games </h4>
-            <p>At EpicGamesHub
-,
-                 we offer an extensive collection of games across various genres to suit every type of gamer. From the latest action-packed adventures and immersive RPGs to strategic simulations and casual indie games,
-                 our library is constantly updated to include the newest releases and timeless classics.</p>
-        </div>
-        <div class="services-item col-6" id="trigger-section2">
-            <mat-icon class="icons">payment</mat-icon>
-            <h4>Easy and Secure Purchasing</h4>
-            <p>Buying games online has never been easier or more secure. Our streamlined purchasing process ensures a hassle-free experience from start to finish. With multiple payment options and industry-leading encryption, you can shop with confidence knowing that your personal and financial information is safe.</p>
+    <div class="services-content container" style="text-align: center;">
+        <div class="row container">
+            <div class="services-item services-item1 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12 " #translateEle>
+                <mat-icon class="icons">sports_esports</mat-icon>
+                <h4>Wide Selection of Games </h4>
+                <p>At EpicGamesHub,
+                     we offer an extensive collection of games across various genres to suit every type of gamer. From the latest action-packed adventures and immersive RPGs to strategic simulations and casual indie games,
+                     our library is constantly updated to include the newest releases and timeless classics.</p>
+            </div>
+            <div class="services-item services-item2 col-xl-6 col-lg-6 col-md-12 col-sm-12 col-12" #translateEle2>
+                <mat-icon class="icons">payment</mat-icon>
+                <h4>Easy and Secure Purchasing</h4>
+                <p>Buying games online has never been easier or more secure. Our streamlined purchasing process ensures a hassle-free experience from start to finish. With multiple payment options and industry-leading encryption, you can shop with confidence knowing that your personal and financial information is safe.</p>
+            </div>
         </div>
     </div>
 </div>
@@ -39,16 +40,16 @@
         <span class="line line2"></span>
     </div>
     <div class="contact-content row">
-        <div class="contact-item col ">
+        <div class="contact-item col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
             <mat-icon class="icons">location_on</mat-icon>
             <h4>1234 Elm Street, Springfield, IL 62704, USA</h4>
         </div>
-        <div class="contact-item col ">
+        <div class="contact-item col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12 ">
             <mat-icon class="icons">phone</mat-icon>
             <h4>+111 343 3134</h4>
             <h4>+111 934 4846</h4>
         </div>
-        <div class="contact-item col">
+        <div class="contact-item col-xl-4 col-lg-4 col-md-6 col-sm-12 col-12">
             <mat-icon class="icons">mail</mat-icon>
             <h4>support&#64;EpicGamesHub
 .com</h4>

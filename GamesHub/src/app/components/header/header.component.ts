@@ -3,6 +3,7 @@ import { LoginService } from '../../services/login.service';
 import { CartService } from '../../services/cart.service';
 import { game } from '../../models/game.model';
 import { StoreComponent } from '../store/store.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -14,7 +15,7 @@ export class HeaderComponent implements OnInit {
   isLoggedIn:boolean=false;
   username:string='';
   itemsAdded:number = 0;
-  constructor( private log:LoginService , private cart:CartService){
+  constructor( private log:LoginService , private cart:CartService , private router:Router){
   //  this.itemsAdded=this.cart.getNoOfCartItems()
    console.log(this.cart.getNoOfCartItems())
   }
@@ -28,7 +29,14 @@ export class HeaderComponent implements OnInit {
     })
     this.cart.getNoOfCartItems().subscribe((Games:number)=> {this.itemsAdded= Games})
   }
-
+  
+  showServices(){
+    this.router.navigateByUrl('/home');
+    window.scrollBy({
+      top: 600,
+      behavior:'smooth'
+    })
+  }
 
   setActiveLink(event: Event, link: string) {
     if(link!=''){

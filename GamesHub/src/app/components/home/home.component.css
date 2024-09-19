@@ -1,7 +1,7 @@
 
 section.child-1{
  
-    margin: 40px 0px 0px 50px;
+   
 }
  div{
     /* background-color: red; */
@@ -30,6 +30,20 @@ section div p{
 
 }
 
+.home-content{
+    margin: 40px 0px 0px 30px;
+    transition: all 1s;
+}
+
+.home-item1{
+    transform: translateY(1500px);
+    opacity: 0;
+}
+.home-item2{
+    transform: translateY(-1500px);
+    opacity: 0;
+}
+
 
 
 
@@ -46,13 +60,25 @@ section div p{
   background-color: var(--font-color);
   color: white;
 }
+
+.translate{
+    transform: translateX(0);
+}
+
 .services-content{
-  margin-left: 50px;
+  /* margin-left: 50px; */
+}
+
+.services-item1{
+   transform: translateX(-1000px);
+}
+.services-item2{
+   transform: translateX(1000px);
 }
 
 .services-item{
-    text-align: center;
-    transition: .2s;
+    /* text-align: center; */
+    transition: all 1s;
 }
 
 .line{

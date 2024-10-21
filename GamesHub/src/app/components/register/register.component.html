@@ -1,11 +1,10 @@
-<body class="" >
-   <div class="container">
+
+   <div class="container parent">
      <div class="row par">
-      <div class="col-7 child1" [ngStyle]="backgroundStyle">
-          
+      <div class="col child1" [ngStyle]="backgroundStyle">
       </div>
-      <div class="col-5 child2">
-       <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.get('Name')?.value,registerForm.get('Email')?.value,registerForm.get('Password')?.value)" class="row g-3 parent ">
+      <div class="col child2">
+       <form [formGroup]="registerForm" (ngSubmit)="onSubmit(registerForm.get('Name')?.value,registerForm.get('Email')?.value,registerForm.get('Password')?.value)">
         <legend><h2>Sign Up now!</h2></legend>
         <mat-form-field style="width: 100%; height: 80px;">
           <mat-label>Username</mat-label>
@@ -34,18 +33,9 @@
             Password must be 8~20 alphanumeric (characters or numbers)
           </mat-error>
         </mat-form-field>  
-           <div class="">
-             <div class="form-check">
-               <input class="form-check-input" type="checkbox" id="gridCheck">
-               <label class="form-check-label" for="gridCheck">
-                 Check me out
-               </label>
-             </div>
-           </div>
            <div class="w-100">
              <button type="submit" [disabled]="registerForm.invalid" class="btn submit-btn">Sign Up</button>
             </div>
-            
             <hr>
             <div class="">
              <button type="submit" class="btn submit-btn">continue with google <img src="assets/google.png" alt=""></button>
@@ -54,4 +44,3 @@
       </div>
      </div>
     </div>
-</body>

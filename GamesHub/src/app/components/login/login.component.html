@@ -1,17 +1,8 @@
-<!-- <div>
-  {{ Password?.errors | json}}
- 
-</div>
-<div>
-  {{ password.className | json}}
- 
-</div> -->
+
   <div class="container parent">
-    
     <div class="row par">
        <div class="col sdd">
         <form [formGroup]="loginForm" (ngSubmit)="OnSubmit(currentName , loginForm.get('Email')?.value , loginForm.get('Password')?.value )">
-         
           <legend><h2>Sign In</h2></legend>
           <mat-form-field class="custom" style="width: 100%; margin-bottom: 4px;">
             <mat-label>Email</mat-label>
@@ -33,8 +24,6 @@
             </mat-error>
           </mat-form-field>
           <div class="mb-3 form-check">
-            <input type="checkbox" class="form-check-input" id="exampleCheck1">
-            <label class="form-check-label" for="exampleCheck1">Check me out</label>
             <span class="signup">don't have an account ?<a [routerLink]="['/register']" routerLinkActive="router-link-active" > sign up</a></span>
           </div>
           <button type="submit" class="btn submit-btn" [disabled]="loginForm.invalid" >Login</button>

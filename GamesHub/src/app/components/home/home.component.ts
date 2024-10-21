@@ -26,23 +26,9 @@ export class HomeComponent implements OnInit{
      setTimeout(()=>{
       this.homeAnimation();
      } , 300)
-  }
-backgroundStyle={
-  // 'background-image': 'url(/assets/home-background.jpeg)',
-  'background-image': 'url(/assets/home-background-removebg.png)',
-  'background-size': 'cover',
-  'height': '80vh',
-  'width':'43%',
-  'background-repeat': 'no-repeat',
-  'background-position-x': '-300px'
-  
-   }
-   
+    }
    @HostListener('window:scroll' , [])
-
-
   onWindowScroll():void{
-    console.log(this.translateEle)
     let scrollDistY =scrollY;
     if(scrollDistY > 500){
       this.translateEle.nativeElement.classList.add('translate')

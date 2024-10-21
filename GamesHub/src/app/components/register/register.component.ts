@@ -39,13 +39,13 @@ panelClass:['snackbar-register']})
 
 
 
- backgroundStyle={
-  'background-image': 'url(/assets/background-register.jpg)',
-  'background-size': 'cover',
-  'height': '650px',
-  'width':'600px',
-  'background-repeat': 'no-repeat',
-  'background-position-x': '-400px'
-  
-}
+  backgroundStyle={
+    'background-image': 'url(/assets/background-register.jpg)',
+    'background-size': 'cover',
+    'height': '600px',
+    'width':'600px',
+    'background-repeat': 'no-repeat',
+    'background-position-x': '-300px'
+    
+  }
 }

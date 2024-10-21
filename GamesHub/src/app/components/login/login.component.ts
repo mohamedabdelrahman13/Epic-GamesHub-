@@ -43,13 +43,12 @@ export class LoginComponent {
           this.router.navigateByUrl('/home')
           this.snack.open('Login Success!' , 'close' , {
           duration:3000,
-          // panelClass:['snackbar']
         })
       }
       else{
         this.snack.open('invalid email or password!' , 'close' , {
           duration:3000 ,
-          // panelClass:['snackbarFailed']
+
         })
       }
   }
@@ -67,15 +66,6 @@ backgroundStyle={
   'width':'600px',
   'background-repeat': 'no-repeat',
   'background-position-x': '-300px'
-  
-}
-backgroundStyleMobile={
-  'background-image': 'url(/assets/image.jpg)',
-  'background-size': 'cover',
-  'height': '200px',
-  'width':'200px',
-  'background-repeat': 'no-repeat',
-  // 'background-position-x': '-300px'
   
 }
 }

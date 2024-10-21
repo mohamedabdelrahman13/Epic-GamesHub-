@@ -1,40 +1,30 @@
 
-section.child-1{
- 
-   
-}
- div{
-    /* background-color: red; */
-    padding: 40px;
-}
-
 div h1{
     font-size:45px;
-        /* color: white; */
 }
 section div p{
     color: black;
     padding: 20px 0px;
 }
-/* button{
-    border-radius: 15px;
-    color: white;
-    border: 1px solid white;
-} */
 
 .child-2{
     border-radius: 50%;
-    /* width: 300px; */
     margin-left:30px ;
     transition: .7s;
 
 }
 
+.Description{
+ padding: 50px 0 0 120px;
+}
+.home-img{
+    transition: all 1s;
+    padding:30px 120px 0 0  ;
+    /* background-color: red; */
+}
 .home-content{
-    margin: 40px 0px 0px 30px;
     transition: all 1s;
 }
-
 .home-item1{
     transform: translateY(1500px);
     opacity: 0;
@@ -45,7 +35,10 @@ section div p{
 }
 
 
-
+div.btns{
+    padding-left: 120px;
+    margin-bottom: 120px;
+}
 
 .learn-more{
     color:white ;
@@ -55,19 +48,22 @@ section div p{
     margin-left: 20px;
     border-radius: 10px;
 }
+
 /* services */
 .services{
   background-color: var(--font-color);
   color: white;
+  /* margin-top: 100px; */
+  padding: 120px 0;
+}
+.services-header{
+    padding-bottom:50px ;
 }
 
 .translate{
     transform: translateX(0);
 }
 
-.services-content{
-  /* margin-left: 50px; */
-}
 
 .services-item1{
    transform: translateX(-1000px);
@@ -101,7 +97,6 @@ section div p{
     font-size: 50px;
     border-radius: 50%;
 }
-
 .services h4{
   margin: 20px 0;
 }
@@ -109,3 +104,66 @@ section div p{
 .contact{
     text-align: center;
 }
+@media(max-width:370px){
+    
+  div h1{
+    font-size:30px;
+        /* color: white; */
+  }
+    .btns{
+        text-align: center;
+        padding: 40px;
+    }
+    .submit-btn{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .learn-more{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media(max-width:500px){
+    .btns{
+        text-align: center;
+        padding: 40px;
+    }
+    .submit-btn{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .learn-more{
+        width: 100%;
+        margin: 0;
+    }
+}
+@media(max-width:768px){
+    .btns{
+        text-align: center;
+        padding: 40px;
+    }
+    .submit-btn{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .learn-more{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@media(max-width:992px){
+    .btns{
+        text-align: center;
+        padding: 40px;
+    }
+    .submit-btn{
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    .learn-more{
+        width: 100%;
+        margin: 0;
+    }
+}
+
